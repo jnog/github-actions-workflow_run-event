@@ -8,9 +8,6 @@ on:
     types:
       - completed
 
-env:
-  GH_BRANCH: ${{ github.event.workflow_run.head_branch }}
-
 jobs:
   test-job:
     name: Test Step
@@ -22,4 +19,4 @@ jobs:
       - run: git branch
       - run: env
       - run: echo "this is a tag :-)"
-        if: startsWith(env.GH_BRANCH, 'refs/tags/')
+        if: startsWith(github.event.workflow_run.head_branch, 'refs/tags/')
