@@ -22,7 +22,12 @@ jobs  :
       - run: |
           echo ${{ github.event.workflow_run.head_branch }}
           echo ${{ github.event.workflow_run.head_sha }}
-          echo ${{ github.event.workflow_run.ref }}
+          echo ${{ github.event.workflow_run.status }}
+          echo ${{ github.event.workflow_run.conclusion }}
+          echo ${{ github.event.workflow_run.pull_requests }}
+          echo ${{ github.event.workflow_run.repository.full_name }}
+          echo ${{ github.event.workflow_run.env }}
+          echo ${{ github.event.workflow_run.github.ref }}
       - run: git branch
       - run: env
       - run: echo "this is a tag :-)"
