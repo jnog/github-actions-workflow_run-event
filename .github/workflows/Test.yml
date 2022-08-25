@@ -13,7 +13,7 @@ env:
 
 jobs  :
   test-job:
-    name: Test Step
+    name: Test Steps
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
