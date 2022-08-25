@@ -16,5 +16,7 @@ jobs:
   preflight-job:
     name: Preflight Step
     runs-on: ubuntu-latest
+    if: >-
+      (contains(github.event.branches.*.name, 'main')) 
     steps:
       - run: env
