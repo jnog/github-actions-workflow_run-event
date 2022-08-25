@@ -7,6 +7,8 @@ on:
       - Preflight
     types:
       - completed
+    branches:
+      - main
       
 env:
   GH_TAG: ${{ github.event.workflow_run.head_branch }}
